@@ -87,5 +87,16 @@ $serveraddress"/cpsess$securitytoken/execute/VersionControl/update" \
 -H "Cookie: session_locale=en; timezone=Asia/Tehran; cpsession=$username$cpsession" \
 --data-raw 'repository_root='$repo'&branch='$branch
 
+echo "logging out ..."
+
+curl -s $serveraddress'/logout/?locale=en' \
+  -H 'Connection: keep-alive' \
+  -H 'Upgrade-Insecure-Requests: 1' \
+  -H 'User-Agent: '$useragent \
+  -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9' \
+  -H 'Referer: '$serveraddress'/' \
+  -H 'Accept-Language: en-US,en;q=0.9' \
+  -H "Cookie: session_locale=en; timezone=Asia/Tehran; cpsession=$username$cpsession"
+
 
 
