@@ -1,5 +1,5 @@
 # cpanelGithub
-a simple bash for auto update on cpanel 
+a simple bash for auto update github repository on cpanel 
 
 
 # usage :
